@@ -10,6 +10,8 @@
  
  @media (max-width:640px){
   .icon-menu {float: right;}
+  .icon-menu:hover + ul li{
+    display: block;}
  }
  @media (max-width:640px){
   nav ul {display: none;}
@@ -26,7 +28,7 @@
   font-size: 2em;
  }
  
- .icon-menu:hover + ul {
+ .icon-menu:hover + ul{
   display: block;
-  
  }
+

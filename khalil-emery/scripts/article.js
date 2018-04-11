@@ -16,6 +16,12 @@ function Article (rawDataObj) {
   this.publishedOn = rawDataObj.publishedOn;
   this.body = rawDataObj.body;
 
+  // Object.keys(rawDataObj).forEach(function(key){
+  //   this[key] = rawDataObj[key];
+  // });
+
+  // Object.assign(this, rawDataObj); 
+
 }
 
 Article.prototype.toHtml = function() {
