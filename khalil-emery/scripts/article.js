@@ -3,7 +3,7 @@
 let articles = [];
 
 // COMMENT: What is the purpose of the following function? Why is its name capitalized? Explain the context of "this" within the function. What does "rawDataObj" represent?
-// rawDataObj is a constructor function,thats why its name is capitalized, "this" property gives the object a value and returns a refernce to the constructor. rawDataObj represents raw data of the object constructor
+// rawDataObj is a constructor function,thats why its name is capitalized, "this" property gives the object a value and returns a refernce to this constructor. rawDataObj represents the raw data of the object constructor
 
 function Article (rawDataObj) {
   // TODO: Use the JS object that is passed in to complete this constructor function:
@@ -20,7 +20,7 @@ function Article (rawDataObj) {
 
 Article.prototype.toHtml = function() {
   // COMMENT: What is the benefit of cloning the article? (see the jQuery docs)
-  // PUT YOUR RESPONSE HERE
+  // It creates a copy of the set of matched elements, meaning that it copies the matched elements as well as all their decendant elements and text nodes.
 
   let $newArticle = $('article.template').clone();
   /* TODO: This cloned article still has a class of template. In our modules.css stylesheet, we should give all elements with a class of template a display of none so that our template does not display in the browser. But, we also need to make sure we're not accidentally hiding our cloned article. */
@@ -41,8 +41,6 @@ Article.prototype.toHtml = function() {
   $newArticle.find('address a').attr('href', this.authorUrl);
   $newArticle.find('h1').html(this.title);
   $newArticle.find('section').html(this.body);
-  // $newArticle.find('time').attr('datetime', this.publishedOn);
-  $newArticle.find('article').attr('data-category', this.category);
 
   // REVIEW: Display the date as a relative number of 'days ago'
   $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
@@ -70,5 +68,5 @@ rawData.forEach(function(val){
 // }
 
 articles.forEach(function(val, i){
-  $('#articles').append(articles[val, i].toHtml());
+  $('#articles').append(articles[i].toHtml());
 });
