@@ -65,14 +65,26 @@ rawData.sort(function(a,b) {
 //   articles.push(new Article(rawData[i])); //create new instance of Article for each element in the articles array
 // }
 
-rawData.forEach(function(val){
-  articles.push(new Article(val));
+// Original function but not ideal
+// rawData.forEach(function(val){
+//   articles.push(new Article(val));
+// });
+
+// Refactored code
+rawData.forEach(function(articleData){
+  articles.push(new Article(articleData));
 });
 
 // for(let i = 0; i < articles.length; i++) { //iterate over articles array
 //   $('#articles').append(articles[i].toHtml()); //target articles ID and append each position array to HTML
 // }
 
-articles.forEach(function(val, i){
-  $('#articles').append(articles[i].toHtml());
+// Original function but not ideal
+// articles.forEach(function(val, i){
+//   $('#articles').append(articles[i].toHtml());
+// });
+
+// Refactored code
+articles.forEach(function(articleShow){
+  $('#articles').append(articleShow.toHtml());
 });
