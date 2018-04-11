@@ -28,7 +28,5 @@
  
  .icon-menu:hover + ul {
   display: block;
-  position: absolute;
-  top:6em;
   
  }
