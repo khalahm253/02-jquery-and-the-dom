@@ -41,8 +41,8 @@ Article.prototype.toHtml = function() {
   $newArticle.find('address a').attr('href', this.authorUrl);
   $newArticle.find('h1').html(this.title);
   $newArticle.find('section').html(this.body);
-  $newArticle.find('time').attr('datetime', this.publishedOn);
-  
+  // $newArticle.find('time').attr('datetime', this.publishedOn);
+  $newArticle.find('article').attr('data-category', this.category);
 
   // REVIEW: Display the date as a relative number of 'days ago'
   $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
@@ -57,14 +57,18 @@ rawData.sort(function(a,b) {
 
 // TODO: Refactor these for loops using the .forEach() array method.
 
-for(let i = 0; i < rawData.length; i++) {
-  articles.push(new Article(rawData[i])); //create new instance of Article for each element in the articles array
-}
-
-// rawData.forEach(function(rawData, i){
-//   articles.push(new Article(rawData, i));
+// for(let i = 0; i < rawData.length; i++) {
+//   articles.push(new Article(rawData[i])); //create new instance of Article for each element in the articles array
 // }
 
-for(let i = 0; i < articles.length; i++) { //iterate over articles array
-  $('#articles').append(articles[i].toHtml()); //target articles ID and append each position array to HTML
-}
+rawData.forEach(function(val){
+  articles.push(new Article(val));
+});
+
+// for(let i = 0; i < articles.length; i++) { //iterate over articles array
+//   $('#articles').append(articles[i].toHtml()); //target articles ID and append each position array to HTML
+// }
+
+articles.forEach(function(val, i){
+  $('#articles').append(articles[val, i].toHtml());
+});
