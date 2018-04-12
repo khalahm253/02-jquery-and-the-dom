@@ -5,10 +5,10 @@ Kilovolt Blog
 **Version**: 1.0.0 (increment the patch/fix version number up if you make more commits past your first submission)
 
 ## Overview
-<!-- Our vision for this app is to provide writers a place display their art in a place that is organized and easy to consume  -->
+Our vision for this app is to provide writers a place display their art in a place that is organized and easy to consume 
 
 ## Getting Started
-<!-- Finish styling css
+Finish styling css
 
 Complete the html
 
@@ -21,20 +21,20 @@ Utilize jQuery functionality to traverse the DOM and complete the HTML template 
 As a developer, I want to optimize iteration with JavaScript array methods so that my code is more condensed and maintainable.
 
 Refactor all for loops using the .forEach() method.
- -->
+
 
 ## Architecture
-<!-- This project includes css, html, javascript, and jQuery -->
+This project includes css, html, javascript, and jQuery
 
 ## Change Log
-<!--
+
 04-11-2018 10:00pm - Constructor function completed
 04-11-2018 11:00pm - jQuery function completed
 04-11-2018 12:00pm - Refactored for loops to forEach
 04-11-2018 1:00pm - Blog now has basic functionality
--->
+
 ## Credits and Collaborations
 
-<!-- TA's Melanie and Nicholas  
+TA's Melanie and Nicholas  
      www.mdn.com 
--->
+
